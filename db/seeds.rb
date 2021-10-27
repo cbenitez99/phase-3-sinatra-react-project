@@ -1,5 +1,6 @@
 puts "🌱 Seeding spices..."
 
-# Seed your database here
+Company.create(name: "EA")
+Company.create(name: "Activision")
 
 puts "✅ Done seeding!"

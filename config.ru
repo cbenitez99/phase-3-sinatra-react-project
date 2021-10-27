@@ -13,3 +13,8 @@ use Rack::JSONBodyParser
 
 # Our application
 run ApplicationController
+run CompaniesController
+run GamesController
+run ReviewsController
+#games controller
+#reviews controller
