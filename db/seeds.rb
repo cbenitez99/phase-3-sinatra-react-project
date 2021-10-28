@@ -1,10 +1,17 @@
 puts "🌱 Seeding spices..."
 Review.destroy_all
 Game.destroy_all
+Platform.destroy_all
 
-game1 = Game.create(title: "FIFA 2021", price: 59)
-game2 = Game.create(title: "Call of Duty: Thor's Wrath", price: 39)
-game3 = Game.create(title: "The Legend of Zelda: Breath of The Wild", price: 49)
+plat1 = Platform.create(platform_type: "Xbox One")
+plat2 = Platform.create(platform_type: "Play-Station 5")
+plat3 = Platform.create(platform_type: "Nintendo Switch")
+
+
+
+game1 = Game.create(title: "FIFA 2021", price: 59, platform_id: plat1.id)
+game2 = Game.create(title: "Call of Duty: Thor's Wrath", price: 39, platform_id: plat2.id)
+game3 = Game.create(title: "The Legend of Zelda: Breath of The Wild", price: 49, platform_id: plat3.id)
 
 review1 = Review.create(user_name: "Cristian", content: "Awesome game!", game_id: game1.id)
 review2 = Review.create(user_name: "Alex", content: "Loved the campaign", game_id: game2.id)
