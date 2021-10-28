@@ -10,21 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_27_181500) do
-
-  create_table "companies", force: :cascade do |t|
-    t.string "name"
-  end
+ActiveRecord::Schema.define(version: 2021_10_28_005916) do
 
   create_table "games", force: :cascade do |t|
     t.string "title"
-    t.integer "company_id"
+    t.integer "price"
   end
 
   create_table "reviews", force: :cascade do |t|
     t.string "user_name"
-    t.integer "game_id"
     t.string "content"
+    t.integer "game_id"
   end
 
 end
