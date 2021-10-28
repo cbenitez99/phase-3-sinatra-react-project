@@ -2,7 +2,7 @@ class ApplicationController < Sinatra::Base
   set :default_content_type, 'application/json'
   
   get "/" do
-    Game.all.to_json#(:include => :platform)
+    Game.all.to_json(:include => :platform)
   end
 
   get "/games" do
@@ -11,5 +11,9 @@ class ApplicationController < Sinatra::Base
 
   get "/reviews" do
     Review.all.to_json#(:include => :game, :except => :game_id)
+  end
+
+  get "/platforms" do 
+    Platform.all.to_json
   end
 end
