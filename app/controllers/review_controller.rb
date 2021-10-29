@@ -8,5 +8,7 @@ class ReviewController < ApplicationController
         review = Review.all.find(params[:id])
         review.to_json
     end
+
     
+    # # post `/reviews`
 end

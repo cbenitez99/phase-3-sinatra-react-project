@@ -1,4 +1,4 @@
-require 'pry'
+# require 'pry'
 puts "🌱 Seeding spices..."
 # binding.pry
 Review.destroy_all
