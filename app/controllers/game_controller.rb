@@ -1,19 +1,10 @@
 class GameController < ApplicationController
-    # get "/games" do #gives all games
-    #     Game.all.to_json
-    # end
 
-    # get "/games/:id" do #gives back a specific game
-    #     game = Game.find(params[:id])
-    #     game.to_json
-    # end
+    get '/games' do
+        Game.all.to_json(:include => :reviews) #including a nested array! HOW DO I DO THIS?
+    end
 
-    # get "/games/:id/review" do #gives back all reviews of a game
-    #     game = Game.find(params[:id])
-    #     game.to_json(:include => :reviews)
-    # end
-   
-    post "/games/review" do
+    post "/games" do
         
         game = Game.create(
             title: params[:title],
@@ -23,7 +14,10 @@ class GameController < ApplicationController
         game.to_json
     end
 
-    get '/games/review' do
-       Game.all.to_json(:include => :reviews)
+    delete '/games' do
+        game = Game.find(params[:id])
+        game.destroy
     end
+
+    
 end
