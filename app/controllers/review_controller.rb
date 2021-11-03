@@ -10,8 +10,8 @@ class ReviewController < ApplicationController
     end
 
     post "/reviews" do #sends review data through conditionals to the DB
-        review = Review.find_or_create_by(user_name: params[:user_name], content: params[:content])
-        game = Game.new(title: params[:title], price: params[:price], platform: params[:platform])
+        game = Game.find_or_create_by(title: params[:title], price: params[:price], platform: params[:platform])
+        review = Review.new(user_name: params[:user_name], content: params[:content], game_id: game.id)
         if review.save
             review.to_json(:include => :game, :except => :game_id)
         else
