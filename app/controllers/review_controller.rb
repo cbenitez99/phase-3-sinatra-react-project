@@ -1,6 +1,6 @@
 class ReviewController < ApplicationController
     
-    get "/reviews" do #gives all reviews
+    get "/reviews" do #gives all reviews and includes associated games
         Review.all.to_json(:include => :game, :except => :game_id)
     end
 
