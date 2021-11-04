@@ -23,14 +23,4 @@ class ReviewController < ApplicationController
         review = Review.find(params[:id])
         review.delete
     end
-
-    # patch "/reviews/:id" do 
-    #     review = Review.find(params[:id])
-    #     if review.update(content: params[:content])
-    #         review.to_json(:include => :game, :except => :game_id)
-    #     end 
-    # end 
-
-    
-
 end
