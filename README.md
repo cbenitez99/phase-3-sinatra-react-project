@@ -1,6 +1,4 @@
-## Getting Started
-
-### Backend Setup
+## Getting Started Backend Setup
 
 This repository has all the starter code needed to get a Sinatra backend up and
 running. [**Fork and clone**][fork link] this repository to get started. Then, run
