@@ -26,7 +26,7 @@ class ReviewController < ApplicationController
 
     patch "/reviews/:id" do 
         review = Review.find(params[:id])
-        if review.update(content: params[:content])
+        if review.update(likes: params[:likes])
             review.to_json(:include => :game, :except => :game_id)
         end 
     end 
