@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 2021_10_28_005916) do
   create_table "reviews", force: :cascade do |t|
     t.string "user_name"
     t.string "content"
+    t.integer "likes"
     t.integer "game_id"
   end
 
