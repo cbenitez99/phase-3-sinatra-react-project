@@ -30,5 +30,6 @@ class ReviewController < ApplicationController
             review.to_json(:include => :game, :except => :game_id)
         end 
     end 
+
     
 end
