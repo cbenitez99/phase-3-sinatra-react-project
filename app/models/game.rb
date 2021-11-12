@@ -4,4 +4,5 @@ class Game < ActiveRecord::Base
     def self.zero_likes
         Game.where("title = 'Battlefield V'")
     end
+
 end
