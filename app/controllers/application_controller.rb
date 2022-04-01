@@ -8,12 +8,9 @@ class ApplicationController < Sinatra::Base
     "Go to http://localhost:9292/reviews"
   end
 
-  get '/games' do
-    Game.all.to_json
+  get '/sorted-games' do
+    Game.sort_game.to_json
   end
 
-  get '/zero-reviews' do
-    Game.zero_likes.to_json
-  end
-  
 end
+

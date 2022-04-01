@@ -8,7 +8,7 @@ use Rack::Cors do
   end
 end
 
-# Parse JSON from the request body into the params hash
+# Parse JSON from the request body into the param hashs
 use Rack::JSONBodyParser
 
 # Our application
